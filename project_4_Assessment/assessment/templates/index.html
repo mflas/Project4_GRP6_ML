@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diabetes Self Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Diabetes Self Assessment</h1>
+            <br>
+            <form method="POST" action="/risk" role="form" , name="Diabetes Self Assessment">
+                <div class="form-group">
+                    <label for="HighBP">HighBP: 0-No High blood pressure 1-With high blood pressure</label>
+                    <input type="number" class="form-control" id="HighBP" name="HighBP">
+                </div>
+                <div class="form-group">
+                    <label for="HighChol">HighChol: 0-Nocholesterol illness 1-With Nocholesterol illness</label>
+                    <input type="number" class="form-control" id="HighChol" name="HighChol">
+                </div>
+                <div class="form-group">
+                    <label for="CholCheck">CholCheck: 0-Nocholesterol check had been done 1-Nocholesterol had been done within last 12 months</label>
+                    <input type="number" class="form-control" id="CholCheck" name="CholCheck">
+                </div>
+                <div class="form-group">
+                    <label for="BMI">BMI: Body Mass Index</label>
+                    <input type="number" class="form-control" id="BMI" name="BMI">
+                </div>
+                <div class="form-group">
+                    <label for="Smoker">Smoker: 0-None smoker 1-smoker </label>
+                    <input type="number" class="form-control" id="Smoker" name="Smoker">
+                </div>
+                <div class="form-group">
+                    <label for="Stroke">Stroke: 0-Haven't had stroke 1-have stroke</label>
+                    <input type="number" class="form-control" id="Stroke" name="Stroke">
+                </div>
+                <div class="form-group">
+                    <label for="HeartDiseaseorAttack">HeartDiseaseorAttack: 0-Haven't had Heart Disease or Attack 1-have Heart Disease or Attack</label>
+                    <input type="number" class="form-control" id="HeartDiseaseorAttack" name="HeartDiseaseorAttack">
+                </div>
+                <div class="form-group">
+                    <label for="PhysActivity">PhysActivity: 0-No physical activities 1-regular physical acitivities</label>
+                    <input type="number" class="form-control" id="PhysActivity" name="PhysActivity">
+                </div>
+                <div class="form-group">
+                    <label for="Fruits">Fruits: 0-No fruits intake 1-regular fruits intake</label>
+                    <input type="number" class="form-control" id="Fruits" name="Fruits">
+                </div>
+                <div class="form-group">
+                    <label for="Veggies">Veggies: 0-No veggies intake 1-regular veggies intake</label>
+                    <input type="number" class="form-control" id="Veggies" name="Veggies">
+                </div>
+                 <div class="form-group">
+                    <label for="HvyAlcoholConsump">HvyAlcoholConsump: 0-Don't over drink alcohol 1-heavy drinking</label>
+                    <input type="number" class="form-control" id="HvyAlcoholConsump" name="HvyAlcoholConsump">
+                </div>
+                <div class="form-group">
+                    <label for="AnyHealthcare">AnyHealthcare: 0-Don't have health cover 1-have health care</label>
+                    <input type="number" class="form-control" id="AnyHealthcare" name="AnyHealthcare">
+                </div>
+                <div class="form-group">
+                    <label for="NoDocbcCost">NoDocbcCost: 0-having fund to cover doctor cost 1-have insufficient fund to cover doctor cost</label>
+                    <input type="number" class="form-control" id="NoDocbcCost" name="NoDocbcCost">
+                </div>
+                <div class="form-group">
+                    <label for="GenHlth">GenHlth: 0-Unheathy 1-Health </label>
+                    <input type="number" class="form-control" id="GenHlth" name="GenHlth">
+                </div>
+                <div class="form-group">
+                    <label for="MentHlth">MentHlth: 0-No mental illness 1-having mental illness</label>
+                    <input type="number" class="form-control" id="MentHlth" name="MentHlth">
+                </div>
+                <div class="form-group">
+                    <label for="PhysHlth">PhysHlth: 0-Unheathy 1-Health</label>
+                    <input type="number" class="form-control" id="PhysHlth" name="PhysHlth">
+                </div>
+                <div class="form-group">
+                    <label for="DiffWalk">DiffWalk: 0-No difficulty in walking 1-having walking difficulty</label>
+                    <input type="number" class="form-control" id="DiffWalk" name="DiffWalk">
+                </div>
+                <div class="form-group">
+                    <label for="Sex">Sex: 0-female 1-male</label>
+                    <input type="number" class="form-control" id="Sex" name="Sex">
+                </div>
+                 <div class="form-group">
+                    <label for="Age">Age: Type your age</label>
+                    <input type="number" class="form-control" id="Age" name="Age">
+                </div>
+                <div class="form-group">
+                    <label for="Education">Education: 0-13 education level</label>
+                    <input type="number" class="form-control" id="Education" name="Education">
+                </div>
+                <div class="form-group">
+                    <label for="Income">Income: Income</label>
+                    <input type="number" class="form-control" id="Income" name="Income">
+                </div>
+                <input type="submit" value="submit" class="btn btn-default">
+            </form>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>
