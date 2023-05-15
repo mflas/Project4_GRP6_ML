@@ -3,6 +3,8 @@ you will work with your group to solve, analyze, or visualize a problem using ma
 
 Open the Project_4_Assessment to access the tool
 
+The machine learning model and Data Analysis is in Project4_Working 2FINAL, accessible via Google Colab.
+
 - This project dependencies will be installed in this environment.
 - Note: This should contain only python 3.7—and not anaconda.
 ```bash
