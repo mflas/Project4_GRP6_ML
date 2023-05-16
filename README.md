@@ -1,7 +1,9 @@
 # Project4_GRP6_ML
 you will work with your group to solve, analyze, or visualize a problem using machine learning (ML) with the other technologies we’ve learned
 
-Open the Project_4_Assessment to access the tool
+Open the Project_4_Assessment to access the tool for the webpage and too
+Data analysis is included in the Python model Project4_Working_Part1_Analysis.ipynb
+Machine Learning Model build in Colab file reference Project4_Working_2FINAL.ipynb
 
 The machine learning model and Data Analysis is in Project4_Working 2FINAL, accessible via Google Colab.
 
